@@ -1,0 +1,8 @@
+                       /// Notes:
+ if consumerWidget is used, the entire Scaffold will be rebuilt let say we need the change on the appBar
+ if Consumer is used on the body then on the effected widget got rebuilt
+ ref.read() is a one time method , it is only advisable to use in a stateful widget not inside abuildContex
+ ref.read is a one time listening part. reommend to use inside function or initState
+ ref.watch() is used if we want to keep listening to events or constants change.
+ .notifier will allow us to change value .state
+ StateProvider is used for siple value like string, bool, integer
