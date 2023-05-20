@@ -6,3 +6,10 @@
  ref.watch() is used if we want to keep listening to events or constants change.
  .notifier will allow us to change value .state
  StateProvider is used for siple value like string, bool, integer
+
+ let say we want to update a map we use stateNotifier and stateNotifierProvider
+ copyWith function or method is to update a value.
+
+ so if we don't want passing our state into the stateNotifers anywhere in it is being we called , we can declare it in our stateNotifers directly.
+ ref.select is use whenever we want to change just one single value of a property.
+ FutureProvider: is a provider based on http, firebase, async calls
