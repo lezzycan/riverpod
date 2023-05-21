@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 
 class UserParams {
   final String name;
@@ -53,4 +55,15 @@ class UserParams {
 
   @override
   int get hashCode => name.hashCode ^ email.hashCode;
+}
+
+ final userRepositoryProvider = Provider((ref) => UserRepository());// this is done inorder to save initialzing UerRepository everywhere in our code.
+class UserRepository{
+  Future<UserParams> fetchUserData(){
+  const url = 'https://jsonplaceholder.typicode.com/users/1';
+  return http.get(Uri.parse(url)).then(
+        (value) => UserParams.fromJson(value.body),
+      );
+  }
+
 }

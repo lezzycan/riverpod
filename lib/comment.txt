@@ -5,7 +5,7 @@
  ref.read is a one time listening part. reommend to use inside function or initState
  ref.watch() is used if we want to keep listening to events or constants change.
  .notifier will allow us to change value .state
- StateProvider is used for siple value like string, bool, integer
+ StateProvider is used for simple value like string, bool, integer
 
  let say we want to update a map we use stateNotifier and stateNotifierProvider
  copyWith function or method is to update a value.
